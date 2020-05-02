@@ -128,8 +128,8 @@ gulp.task('build', gulp.series(
     img,
     fonts,
     favicon,
-    spritesPng
-    // gulp.parallel(styles, scripts, htmls, img, fonts)
+    spritesPng,
+    gulp.parallel(styles, scripts, htmls, img, fonts, spritesPng)
 ));
 
 gulp.task('default', gulp.series(
