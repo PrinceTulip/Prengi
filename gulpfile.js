@@ -72,10 +72,10 @@ function htmls() {
 
 function img() {
   return gulp.src(paths.src + 'img/*')
-      .pipe(imagemin([
-        imagemin.mozjpeg({quality: 78, progressive: true}),
-        imagemin.optipng({optimizationLevel: 5}),
-      ]))
+      //.pipe(imagemin([
+      //  imagemin.mozjpeg({quality: 78, progressive: true}),
+      //  imagemin.optipng({optimizationLevel: 5}),
+      //]))
       .pipe(gulp.dest(paths.build + 'img'));
 }
 
