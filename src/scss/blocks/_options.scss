@@ -1,0 +1,89 @@
+.options {
+  position: relative;
+}
+
+.options__big-title {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 34%;
+  color: $white;
+
+  @include laptop {
+    position: relative;
+    color: $black;
+    left: 0;
+  }
+}
+
+.options__bg-wrap {
+  background: url("../img/cloud.png") no-repeat center/cover;
+}
+
+.options__bg-wrap--2 {
+  background: url("../img/server.png") no-repeat center/cover;
+
+}
+
+.options__item {
+  position: relative;
+  text-align: right;
+  padding: 200px 0;
+  z-index: 5;
+
+  @include phones {
+    text-align: center;
+  }
+
+  &:after {
+    position: absolute;
+    bottom: 160px;
+    right: -32px;
+    content: '';
+    width: 167px;
+    height: 167px;
+    background-color: #00c2f0;
+    opacity: 0.3;
+    z-index: -1;
+
+    @include phones {
+      display: none;
+    }
+  }
+}
+
+.options__item--left {
+  text-align: left;
+
+  @include phones {
+    text-align: center;
+  }
+
+  &:after {
+    left: -32px;
+  }
+}
+
+.options__title {
+  font-size: 30px;
+  font-weight: 400;
+  color: $white;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  @include phones {
+    font-size: 24px;
+  }
+}
+
+.options__desc {
+  position: relative;
+  font-size: 17px;
+  font-weight: 300;
+  color: $white;
+
+  @include phones {
+    font-size: 14px;
+  }
+}
+

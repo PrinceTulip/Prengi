@@ -1,0 +1,110 @@
+.expert-decisions {
+  padding-bottom: 50px;
+  background: url("../img/decisions-bg.png") no-repeat center/cover;
+}
+
+.expert-decisions__title {
+  color: $white;
+}
+
+.expert-decisions__tabs {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #ffffff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+}
+
+.expert-decisions__tabs .expert-decisions__tabs-link:last-child {
+  border-right: none;
+  border-bottom: none;
+}
+
+.expert-decisions__tabs-link  {
+  border-right: 1px solid rgba( 201, 211, 203, .5);
+
+  @include phones {
+    border-bottom: 1px solid rgba( 201, 211, 203, .5);
+    border-right: none;
+  }
+
+
+  a {
+    padding: 19px 24px;
+    display: inline-block;
+    color: $white;
+
+    @media (max-width:1139px) {
+      padding: 19px 15px;
+    }
+
+    @include laptop {
+      padding: 19px 11px;
+    }
+
+  }
+}
+
+.expert-decisions__tabs-link--active a {
+  color: $blue;
+}
+
+.expert-decisions__item {
+  margin-top: 36px;
+  text-align: center;
+}
+
+.expert-decisions button {
+  position: absolute;
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  border-color: $blue;
+  top: 50%;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  z-index: 20;
+
+  @include phones {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.expert-decision__prevSelector {
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  border-right: 0;
+  border-top: 0;
+  background: transparent;
+  left: 50px;
+
+  @include laptop {
+    left: 20px;
+  }
+
+}
+
+.expert-decision__nextSelector {
+  border-top: 2px solid;
+  border-left: 0;
+  border-right: 2px solid;
+  border-bottom: 0;
+  transform: rotate(45deg);
+  right: 50px;
+  background: transparent;
+
+  @include laptop {
+    right: 20px;
+  }
+
+}
+
+.expert-decisions__tabs-row {
+  @include phones {
+    display: block;
+  }
+}

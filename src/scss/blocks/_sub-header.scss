@@ -1,0 +1,37 @@
+.sub-header {
+  padding: 20px 0 15px 0;
+
+  @include laptop {
+    display: none;
+  }
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.sub-header__img {
+  background: url("../img/sprite.png") no-repeat;
+  width: 28px;
+  height: 28px;
+}
+
+.sub-header__img--ua {
+  background-position: -106px 7px;
+}
+
+.sub-header__img--de {
+  background-position: 0px 7px;
+}
+
+.sub-header__img--es {
+  background-position: -53px 7px;
+}
+
+.sub-header__img--gb {
+  background-position: 0px -40px;
+}
+
+.sub-header__img--lux {
+  background-position: -53px -40px;
+}

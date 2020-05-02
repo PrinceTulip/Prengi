@@ -1,0 +1,50 @@
+.advantages {
+  padding-bottom: 80px;
+
+  @include tablets {
+    padding-bottom: 40px;
+  }
+}
+
+.advantages__item {
+
+  min-height: 355px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+
+.advantages__item--1 {
+  background: url("../img/features-1.png") no-repeat center/cover;
+}
+
+.advantages__item--2 {
+  background: url("../img/features-2.png") no-repeat center/cover;
+}
+
+.advantages__item--3 {
+  background: url("../img/features-3.png") no-repeat center/cover;
+}
+
+.advantages__item--4 {
+  background: url("../img/features-4.png") no-repeat center/cover;
+}
+
+.advantages__item--5 {
+  background: url("../img/features-5.png") no-repeat center/cover;
+}
+
+.advantages__item--6 {
+  background: url("../img/features-6.png") no-repeat;
+}
+
+
+.advantages__desc {
+  font-size: 23px;
+  font-weight: 400;
+  color: $white;
+  background: rgba(0,0,0, 0.6);
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+}

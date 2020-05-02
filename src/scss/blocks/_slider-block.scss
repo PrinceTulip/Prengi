@@ -1,0 +1,126 @@
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slideInRight {
+  animation-name: slideInRight;
+  animation-duration: 0.5s;
+}
+
+.slider-block__title {
+  font-size: 42px;
+  color: $white;
+  font-weight: 400;
+  margin-bottom: 20px;
+
+  @include phones {
+    font-size: 32px;
+  }
+}
+
+.slider-block__desc {
+  color: $white;
+  margin-bottom: 40px;
+  font-size: 21px;
+  font-weight: 300;
+
+  & span {
+    font-weight: 400;
+  }
+}
+
+.slider-block__button-block {
+  @include phones {
+    margin-bottom: 20px;
+  }
+}
+
+i {
+  border: solid $white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.control {
+  display: flex;
+  position: absolute;
+  bottom: 13%;
+  left: 43%;
+
+  @include phones {
+    display: none;
+  }
+
+
+  @media (max-width:1339px) {
+    bottom: 19%;
+
+  }
+
+  @include laptop {
+    bottom: 43%;
+    left: 43%;
+  }
+
+}
+
+.control__dot {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+
+
+  &--active {
+    background-color: #fff;
+    border: transparent;
+  }
+
+}
+
+.control__dots {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+
+  & button {
+    border: solid $white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+}
+
+.control__left, .control__right {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+

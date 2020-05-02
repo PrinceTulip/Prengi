@@ -1,0 +1,70 @@
+.wrap {
+  background: url("../img/header-bg.png") no-repeat center/cover;
+  padding-top: 40px;
+}
+
+.header {
+  padding-bottom: 70px;
+}
+
+.header-navigation__list {
+  display: flex;
+  justify-content: center;
+
+
+  @include tablets {
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    padding: 20px 15px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 5;
+    transition: 0.6s;
+    text-align: center;
+  }
+
+  &--active {
+    left: 0;
+  }
+
+  & .header-navigation__list-item {
+    padding-right: 36px;
+
+    @include laptop {
+      padding-right: 18px;
+    }
+
+    @include tablets {
+      padding-right: 0;
+      padding-bottom: 30px;
+    }
+
+    @include phones {
+      padding-bottom: 20px;
+    }
+  }
+
+  & .header-navigation__link {
+    text-transform: uppercase;
+    color: $white;
+    font-size: 13px;
+    font-weight: 700;
+
+    @include tablets {
+      font-size: 28px;
+      font-weight: 300;
+    }
+
+    @include phones {
+      font-size: 21px;
+    }
+  }
+}
+
+
+
+
+
