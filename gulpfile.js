@@ -20,6 +20,8 @@ const browserSync = require('browser-sync').create();
 const source = require("vinyl-source-stream");
 const buffer = require("vinyl-buffer");
 const spritesmith = require('gulp.spritesmith'); // npm install gulp.spritesmith
+const imagemin = require('gulp-imagemin');
+
 
 
 const paths =  {
@@ -30,14 +32,15 @@ const paths =  {
 
 function styles() {
   return gulp.src(paths.src + 'scss/main.scss')
-      //.pipe(plumber())
+      .pipe(plumber())
       .pipe(sassGlob())
       .pipe(sass()) // { outputStyle: 'compressed' }
       .pipe(autoprefixer())
-     //.pipe(cleanCSS())
+      .pipe(cleanCSS())
       .pipe(rename({ suffix: ".min" }))
       .pipe(gulp.dest(paths.build + 'css/'))
 }
+
 function scripts() {
 return(
   browserify(paths.src + 'js/main.js')
@@ -66,10 +69,16 @@ function htmls() {
       .pipe(plumber())
       .pipe(gulp.dest(paths.build));
 }
+
 function img() {
   return gulp.src(paths.src + 'img/*')
+      .pipe(imagemin([
+        imagemin.mozjpeg({quality: 78, progressive: true}),
+        imagemin.optipng({optimizationLevel: 5}),
+      ]))
       .pipe(gulp.dest(paths.build + 'img'));
 }
+
 function favicon() {
   return gulp.src(paths.src + 'favicon/*')
       .pipe(gulp.dest(paths.build + 'favicon'));
@@ -89,7 +98,6 @@ function watch() {
   gulp.watch(paths.src + 'img/*', img);
   gulp.watch(paths.src + 'favicon/*', favicon);
   gulp.watch(paths.src + 'img/iconsSprite/*', spritesPng);
-
 }
 
 function serve() {
@@ -110,7 +118,6 @@ exports.img = img;
 exports.favicon = favicon;
 exports.fonts = fonts;
 exports.spritesPng = spritesPng;
-
 
 
 gulp.task('build', gulp.series(
