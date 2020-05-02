@@ -122,6 +122,10 @@ i {
   &:focus {
     outline: none;
   }
+
+  &:hover{
+    color: $blue;
+  }
 }
 
 

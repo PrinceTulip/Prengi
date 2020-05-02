@@ -29,42 +29,44 @@
   &--active {
     left: 0;
   }
+}
 
-  & .header-navigation__list-item {
-    padding-right: 36px;
+.header-navigation__list-item {
+  padding-right: 36px;
 
-    @include laptop {
-      padding-right: 18px;
-    }
-
-    @include tablets {
-      padding-right: 0;
-      padding-bottom: 30px;
-    }
-
-    @include phones {
-      padding-bottom: 20px;
-    }
+  @include laptop {
+    padding-right: 18px;
   }
 
-  & .header-navigation__link {
-    text-transform: uppercase;
-    color: $white;
-    font-size: 13px;
-    font-weight: 700;
+  @include tablets {
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
 
-    @include tablets {
-      font-size: 28px;
-      font-weight: 300;
-    }
-
-    @include phones {
-      font-size: 21px;
-    }
+  @include phones {
+    padding-bottom: 20px;
   }
 }
 
+.header-navigation__link {
+  text-transform: uppercase;
+  color: $white;
+  font-size: 13px;
+  font-weight: 700;
 
+  @include tablets {
+    font-size: 28px;
+    font-weight: 300;
+  }
+
+  @include phones {
+    font-size: 21px;
+  }
+
+  &:hover {
+    color: $blue;
+  }
+}
 
 
 

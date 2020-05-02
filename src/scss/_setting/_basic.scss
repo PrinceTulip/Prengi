@@ -28,7 +28,6 @@ a {
 
   &:hover {
     text-decoration: none;
-    color: $white;
   }
 }
 
@@ -63,6 +62,14 @@ img {
 
   &:focus {
     outline: none;
+  }
+
+  &:hover {
+    background-color: $lighter;
+  }
+
+  &:active {
+    background-color: $darker;
   }
 
 }

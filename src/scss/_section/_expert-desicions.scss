@@ -35,6 +35,10 @@
     display: inline-block;
     color: $white;
 
+    &:hover {
+      color: $blue;
+    }
+
     @media (max-width:1139px) {
       padding: 19px 15px;
     }
